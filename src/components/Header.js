@@ -6,7 +6,7 @@ function Header(props) {
             <div>
                 <span className="logo">Present Online</span>
             </div>
-            <div className="MainBanner">
+            <div className="mainBanner">
 
             </div>
         </header>
