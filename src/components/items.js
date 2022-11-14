@@ -4,11 +4,11 @@ import Item from "./item";
 export class Items extends Component {
     render() {
         return (
-            <div>
+            <main>
                 {this.props.items.map(element => (
                    <Item key={element.id} item={element}/>
                 ))}
-            </div>
+            </main>
         )
     }
 }

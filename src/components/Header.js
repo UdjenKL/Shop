@@ -1,6 +1,8 @@
 import React from 'react';
+import { BsFillCartCheckFill } from 'react-icons/bs';
 
 function Header(props) {
+    let [cartOpen,setCartOpen] = React.useState(false);
     return (
         <header>
             <div>
@@ -10,6 +12,13 @@ function Header(props) {
                     <li>Фото</li>
                     <li>Кабинет</li>
                 </ul>
+                <BsFillCartCheckFill onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`cart-button ${cartOpen && 'active'}`}/>
+                {
+                    cartOpen &&  (
+                        <div className="shop-cart">
+
+                        </div>
+                    )}
             </div>
             <div className="mainBanner">
 
