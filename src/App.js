@@ -1,11 +1,15 @@
 
-function App() {
-  return (
-    <div className="App">
-     SHOP
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-    </div>
-  );
+function App() {
+    return (
+        <div className="App">
+            <Header/>
+            <Footer/>
+
+        </div>
+    );
 }
 
 export default App;
