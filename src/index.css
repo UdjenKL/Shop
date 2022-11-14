@@ -16,6 +16,7 @@ body {
     width: 1280px;
     margin: 50px auto;
 }
+
 header {
     position: relative;
 }
@@ -40,22 +41,30 @@ header ul.navigation li {
 header ul.navigation li:hover {
     opacity: 0.5;
 }
+
 header .cart-button {
     float: right;
-    transition: color 500ms ease;
+    transition: color,transform 500ms ease;
     cursor: pointer;
 }
+
 header .cart-button:hover,
 header .cart-button.active {
     color: darkred;
+    transform: scale(1.5);
 }
+
 header .shop-cart {
     position: absolute;
     top: 30px;
     right: 0;
     width: 450px;
     min-height: 100px;
-    background: red;
+    background: white;
+    -webkit-box-shadow: 9px 4px 19px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 9px 4px 19px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 9px 4px 19px 0px rgba(34, 60, 80, 0.2);
+    z-index: 1000;
 }
 
 header .mainBanner {
@@ -89,12 +98,14 @@ header .mainBanner:before {
     font-weight: 600;
     color: white;
 }
+
 main {
     display: flex;
     width: 100%;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+
 main .item {
     position: relative;
     width: 30%;
@@ -103,23 +114,28 @@ main .item {
     overflow: hidden;
     padding-bottom: 20px;
 }
+
 main .item img {
     width: 100%;
     border-radius: 10px 10px 0 0;
     transition: transform 500ms ease;
 }
+
 main .item img:hover {
     transform: scale(1.20);
 }
+
 main h2,
 main p,
-main b{
+main b {
     margin: 10px 20px;
     color: #333;
 }
+
 main b {
-    color:forestgreen;
+    color: forestgreen;
 }
+
 main .addToCart {
     position: absolute;
     right: 20px;
@@ -129,15 +145,17 @@ main .addToCart {
     height: 35px;
     text-align: center;
     line-height: 35px;
-    color:#fff;
+    color: #fff;
     border-radius: 50px;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: 600;
     transition: transform 500ms ease;
 }
+
 main .addToCart:hover {
     transform: scale(1.8) translateY(-5px);
 }
+
 footer {
     text-align: center;
     margin-top: 100px;

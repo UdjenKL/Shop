@@ -8,7 +8,7 @@ class Item extends React.Component {
                 <h2>{this.props.item.title}</h2>
                 <p>{this.props.item.text}</p>
                 <b>{this.props.item.price}бел.р</b>
-                <div className="addToCart">+</div>
+                <div className="addToCart" onClick={() => this.props.onAdd(this.props.item)}>+</div>
             </div>
         )
     }
