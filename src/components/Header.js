@@ -29,9 +29,9 @@ function Header(props) {
             <div>
                 <span className="logo">+375295023044</span> <br/>
                 <ul className="navigation">
-                    <li>О Нас</li>
-                    <li>Фото</li>
-                    <li>Кабинет</li>
+                    {/*<li>lorem</li>*/}
+                    {/*<li>lorem</li>*/}
+                    {/*<li>lorem</li>*/}
                 </ul>
                 <BsFillCartCheckFill onClick={() => setCartOpen(cartOpen = !cartOpen)}
                                      className={`cart-button ${cartOpen && 'active'}`}/>
