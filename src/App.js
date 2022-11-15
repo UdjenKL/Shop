@@ -33,24 +33,61 @@ class App extends React.Component {
                     category: 'presents',
                     price: '80'
                 },
+                {
+                    id: 4,
+                    title: 'Букет сладость',
+                    imgUrl: '4.jpg',
+                    text: 'lorem ipsum',
+                    category: 'presents',
+                    price: '80'
+                },
+                {
+                    id: 5,
+                    title: 'Букет сладость2',
+                    imgUrl: '6.jpg',
+                    text: 'lorem ipsum',
+                    category: 'presents',
+                    price: '80'
+                },
+                {
+                    id: 7,
+                    title: 'Букет сладость3',
+                    imgUrl: '7.jpg',
+                    text: 'lorem ipsum',
+                    category: 'presents',
+                    price: '80'
+                },
             ]
         }
         this.addOrder = this.addOrder.bind(this);
+        this.deleteOrder = this.deleteOrder.bind(this);
     }
 
     render() {
         return (
             <div className="App">
-                <Header/>
+                <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
                 <Items items={this.state.items} onAdd={this.addOrder}/>
                 <Footer/>
             </div>
         );
     }
+
+    deleteOrder(id) {
+        console.log(id);
+        this.setState({orders:this.state.orders.filter(element => element.id !== id)})
+    }
+
     addOrder(item) {
-        this.setState({orders: [...this.state.orders,item]},()=> {
-            console.log(this.state.orders);
+        let isInArray = false;
+        this.state.orders.forEach(element => {
+            if (element.id === item.id)
+                isInArray = true
         })
+        if (!isInArray)
+            this.setState({orders: [...this.state.orders, item]}, () => {
+                console.log(this.state.orders);
+            })
     }
 }
 

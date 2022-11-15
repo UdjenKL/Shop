@@ -23,11 +23,19 @@ header {
 
 header .logo {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 40px;
+
+}
+
+header .logo:hover {
+    font-weight: 600;
+    font-size: 40px;
+    transform: scale(1.5);
+    transition: transform 500ms ease;
 }
 
 header ul.navigation {
-    float: right;
+    float: left;
     list-style: none;
 }
 
@@ -43,14 +51,19 @@ header ul.navigation li:hover {
 }
 
 header .cart-button {
+    width: 50px;
+    height: 50px;
     float: right;
-    transition: color,transform 500ms ease;
+    transition: color, transform 500ms ease;
     cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 0;
 }
 
 header .cart-button:hover,
 header .cart-button.active {
-    color: darkred;
+    color: green;
     transform: scale(1.5);
 }
 
@@ -65,12 +78,66 @@ header .shop-cart {
     -moz-box-shadow: 9px 4px 19px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 9px 4px 19px 0px rgba(34, 60, 80, 0.2);
     z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0;
 }
+
+header .shop-cart .empty h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .shop-cart .item {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+
+
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .item b {
+    color: #797979;
+    font-weight: 600;
+}
+
+header .shop-cart .item .delete-icon {
+    float: right;
+    color: orangered;
+    position: relative;
+    top: -20px;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover {
+    color: red;
+    transform: scale(1.5);
+}
+
+header .shop-cart .summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 
 header .mainBanner {
     position: relative;
-    margin: 50px 0;
-    background: url("./img/mainBanner.jpg") center center;
+    margin: 35px 0;
+    background: url("./img/2.jpg") center center;
     width: 100%;
     height: 500px;
     background-blend-mode: multiply;
@@ -79,7 +146,7 @@ header .mainBanner {
 
 header .mainBanner:after {
     position: absolute;
-    content: 'Лучшие букеты в Минске';
+    content: 'Вкусные букеты в Минске';
     top: 100px;
     left: 50px;
     width: 300px;
@@ -117,6 +184,7 @@ main .item {
 
 main .item img {
     width: 100%;
+    max-height: 100%;
     border-radius: 10px 10px 0 0;
     transition: transform 500ms ease;
 }
@@ -137,23 +205,41 @@ main b {
 }
 
 main .addToCart {
+    /*position: absolute;*/
+    /*right: 20px;*/
+    /*bottom: 20px;*/
+    /*background: mediumseagreen;*/
+    /*width: 35px;*/
+    /*height: 35px;*/
+    /*text-align: center;*/
+    /*line-height: 35px;*/
+    /*color: #fff;*/
+    /*border-radius: 50px;*/
+    /*cursor: pointer;*/
+    /*font-weight: 600;*/
+    /*transition: transform 500ms ease;*/
     position: absolute;
-    right: 20px;
+    right: 15px;
     bottom: 20px;
-    background: mediumseagreen;
-    width: 35px;
-    height: 35px;
+    display: inline-block;
+    background-color: limegreen;
+    border-radius: 30px;
+    padding: 10px 20px;
+    min-width: 100px;
     text-align: center;
-    line-height: 35px;
-    color: #fff;
-    border-radius: 50px;
     cursor: pointer;
-    font-weight: 600;
-    transition: transform 500ms ease;
+    transition: background-color $ duration ease-in-out, border-color $ duration ease-in-out;
+    border: 1px solid transparent;
 }
 
+
 main .addToCart:hover {
-    transform: scale(1.8) translateY(-5px);
+    background-color: limegreen;
+}
+
+main .addToCart:active {
+    background-color: darkred;
+    transform: translateY(1px);
 }
 
 footer {
